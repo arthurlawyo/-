@@ -2,7 +2,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Noto Sans TC', sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-h1, h2, h3 { color: #0c1c2c; } 
+h1, h2, h3 { color: #0c1c2c; } /* 使用 logo 的深藍色 */
 
 /* --- Header --- */
 header { background-color: #0c1c2c; color: #fff; padding: 20px 0; }
@@ -10,7 +10,7 @@ header { background-color: #0c1c2c; color: #fff; padding: 20px 0; }
 
 /* --- Hero --- */
 .hero { background-color: #0c1c2c; color: #fff; text-align: center; padding: 80px 0; }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; color: #e1ad6d; } 
+.hero h1 { font-size: 3rem; margin-bottom: 20px; color: #e1ad6d; } /* 使用 logo 的金色 */
 .hero p { font-size: 1.2rem; margin-bottom: 40px; }
 .hero-banner { max-width: 60%; margin-top: 40px; border-radius: 10px; }
 
@@ -27,7 +27,7 @@ header { background-color: #0c1c2c; color: #fff; padding: 20px 0; }
     max-width: 80%; 
     border-radius: 10px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-    border: 20px solid #fff; 
+    border: 20px solid #fff; /* 模擬印刷頁面 Mockup */
     transition: transform 0.3s ease;
 }
 .product-mockup:hover { transform: scale(1.02); }
@@ -44,8 +44,11 @@ header { background-color: #0c1c2c; color: #fff; padding: 20px 0; }
 /* --- Checklist & Rescue --- */
 .checklist-rescue { padding: 80px 0; }
 .row { display: flex; gap: 40px; }
-.checklist-col, .rescue-col { flex: 1; padding: 40px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.checklist-col h3, .rescue-col h3 { font-size: 1.6rem; margin-bottom: 20px; color: #0c1c2c; }
+.checklist-col, .rescue-col { flex: 1; padding: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.checklist-col h3, .rescue-col h3 { font-size: 1.8rem; margin-bottom: 20px; }
+
+/* --- Social Proof --- */
+.social-proof { padding: 40px 0; text-align: center; font-style: italic; background-color: #f9f9f9; color: #777; }
 
 /* --- Pricing/CTA --- */
 .pricing { padding: 100px 0; background-color: #fff; }
@@ -59,24 +62,21 @@ header { background-color: #0c1c2c; color: #fff; padding: 20px 0; }
     text-align: center; 
     box-shadow: 0 10px 25px rgba(225, 173, 109, 0.2);
 }
-.pricing-card h3 { font-size: 1.8rem; margin-bottom: 30px; }
+.pricing-card h3 { font-size: 2rem; margin-bottom: 30px; }
 .pricing-card ul { list-style: none; margin-bottom: 40px; text-align: left; display: inline-block; }
 .pricing-card li { margin-bottom: 10px; font-size: 1.1rem; color: #555; }
-.pricing-card li:before { content: "\2713"; color: #e1ad6d; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; margin-right: 0.5em; } 
+.pricing-card li:before { content: "\2713"; color: #e1ad6d; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; margin-right: 0.5em; } /* 添加勾選符號 */
 .price { font-size: 4rem; font-weight: bold; color: #e1ad6d; margin-bottom: 40px; }
-
-/* CTA Button Updated for <a> tag */
 .cta-button { 
-    display: inline-block;
     background-color: #e1ad6d; 
     color: #0c1c2c; 
     border: none; 
-    padding: 15px 40px; 
-    font-size: 1.3rem; 
+    padding: 15px 50px; 
+    font-size: 1.5rem; 
     font-weight: bold; 
     border-radius: 30px; 
     cursor: pointer; 
-    text-decoration: none;
+    text-transform: uppercase; 
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 5px 15px rgba(225, 173, 109, 0.3);
 }
@@ -86,7 +86,7 @@ header { background-color: #0c1c2c; color: #fff; padding: 20px 0; }
 /* --- Footer --- */
 footer { padding: 30px 0; text-align: center; background-color: #0c1c2c; color: #e1ad6d; }
 
-/* --- Responsive --- */
+/* --- Responsive (響應式設計) --- */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2rem; }
     .hero p { font-size: 1rem; }
