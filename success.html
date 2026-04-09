@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感謝您的支持 - The Rebuild Club</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .success-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            background-color: #fff;
+        }
+        .success-card {
+            max-width: 500px;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        .check-mark {
+            width: 80px;
+            height: 80px;
+            background: #e1ad6d;
+            color: #0c1c2c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 30px;
+        }
+        .status-msg {
+            color: #777;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        .manual-download {
+            margin-top: 30px;
+            color: #0c1c2c;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="image_1.png" alt="The Rebuild Club Logo" class="logo">
+        </div>
+    </header>
+
+    <div class="success-wrapper">
+        <div class="container">
+            <div class="success-card">
+                <div class="check-mark">✓</div>
+                <h1>付款成功！</h1>
+                <p>感謝購買《生理時鐘錨點懶人包》。<br>您的生理重塑之旅現在開始。</p>
+                
+                <div class="status-msg" id="status-text">
+                    您的檔案將在幾秒內自動開始下載...
+                </div>
+
+                <a href="你的_DIRECT_DOWNLOAD_LINK" id="hidden-download" style="display:none;" download>下載</a>
+
+                <p class="status-msg">如果下載沒有自動開始，請點擊下方：</p>
+                <div class="manual-download" onclick="triggerDownload()">手動領取檔案 (PDF)</div>
+            </div>
+            
+            <a href="index.html" style="margin-top: 50px; display: block; color: #aaa; text-decoration: none;">← 返回 The Rebuild Club 首頁</a>
+        </div>
+    </div>
+
+    <script>
+        // 設定直接下載連結
+        const downloadUrl = "https://drive.google.com/uc?export=download&id=你的檔案ID";
+        
+        function triggerDownload() {
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = "生理時鐘錨點懶人包_TheRebuildClub.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            document.getElementById('status-text').innerText = "下載已啟動！請檢查您的下載資料夾。";
+        }
+
+        // 頁面載入 2 秒後自動觸發
+        window.onload = function() {
+            setTimeout(triggerDownload, 2000);
+        };
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 The Rebuild Club. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
