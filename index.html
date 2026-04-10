@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生理時鐘錨點懶人包 - The Rebuild Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* 全局設定 */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans TC', sans-serif; line-height: 1.6; color: #1a1a1a; background-color: #f8f9fa; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        /* 品牌顏色 */
+        :root {
+            --primary-dark: #0f172a; /* 深藍色 */
+            --accent-gold: #d97706; /* 沉穩金色 */
+            --bg-light: #ffffff;
+        }
+
+        /* 導覽列 */
+        header { background-color: var(--primary-dark); padding: 20px 0; text-align: center; }
+        .logo-text { color: var(--accent-gold); font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; }
+
+        /* 英雄區 (Hook - 反面願景) */
+        .hero { background-color: var(--primary-dark); color: #fff; padding: 80px 0 60px; text-align: center; }
+        .hero h1 { font-size: 3.2rem; color: var(--accent-gold); margin-bottom: 20px; line-height: 1.2; }
+        .hero .hook-text { font-size: 1.2rem; color: #cbd5e1; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero .pain-point { background-color: rgba(255,0,0,0.1); border-left: 4px solid #ef4444; padding: 15px; text-align: left; max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; }
+        
+        /* 按鈕樣式 */
+        .btn { display: inline-block; background-color: var(--accent-gold); color: #fff; padding: 18px 40px; font-size: 1.4rem; font-weight: bold; text-decoration: none; border-radius: 50px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(217, 119, 6, 0.4); }
+
+        /* 視覺橫幅 (Banner) */
+        .banner-img { border-radius: 12px; margin: 40px auto 0; box-shadow: 0 20px 40px rgba(0,0,0,0.3); max-width: 800px; }
+
+        /* 科學背書區 */
+        .science { padding: 80px 0; background-color: var(--bg-light); text-align: center; }
+        .science h2 { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 20px; }
+        .science p { font-size: 1.2rem; color: #475569; max-width: 700px; margin: 0 auto; }
+
+        /* Featured Section (無摩擦展示 Mockup) */
+        .featured { padding: 60px 0; background-color: #f1f5f9; text-align: center; }
+        .mockup-wrapper { margin: 40px auto; max-width: 700px; position: relative; }
+        /* 模擬實體紙張/平板的陰影與邊框 */
+        .mockup-img { border-radius: 8px; border: 15px solid #fff; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+
+        /* 步驟與清單區 */
+        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 0; }
+        .steps-box, .checklist-box { background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h3 { font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+        .step-item { margin-bottom: 20px; }
+        .step-item strong { display: block; color: var(--accent-gold); font-size: 1.2rem; }
+        
+        .exclusive { background-color: #fffbeb; border-left: 4px solid var(--accent-gold); padding: 20px; margin-top: 30px; border-radius: 0 8px 8px 0; }
+
+        /* 價格與 CTA 區 */
+        .pricing { background-color: var(--primary-dark); color: #fff; padding: 100px 0; text-align: center; }
+        .price-tag { font-size: 4rem; font-weight: 900; color: var(--accent-gold); margin: 20px 0; }
+        .guarantee { margin-top: 20px; color: #94a3b8; font-size: 0.9rem; }
+
+        /* 響應式 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .content-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-text">THE REBUILD CLUB</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>專治週末報復性熬夜，<br>3 天見效・7 天穩住。</h1>
+            
+            <div class="pain-point">
+                <strong>內部焦慮觸發：</strong> 你是否厭倦了用健康換取那可悲的幾小時自由？週末晚睡晚起，導致週一早晨如同坐飛機般的嚴重時差。在 AI 高速發展的時代，大腦的「腦霧」與疲憊，正在默默邊緣化你的職場競爭力。
+            </div>
+
+            <p class="hook-text">立即停止這種惡性循環。用科學的方法，奪回你的作息主導權。</p>
+            
+            <a href="https://buy.stripe.com/6oUdR9eTl7jA1aV7L0dQQ04" class="btn">立即以 HK$29.9 獲取懶人包</a>
+            <p class="guarantee">購買後即刻獲得秩序與成功，馬上開始重置。</p>
+
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=1200&q=80" alt="高效率辦公桌面" class="banner-img">
+        </div>
+    </section>
+
+    <section class="science">
+        <div class="container">
+            <h2>這不是心靈雞湯，這是硬科學</h2>
+            <p>本方案嚴格遵循 <strong>Huberman Lab</strong> 核心觀念與<strong>行為睡眠醫學框架</strong>。不談意志力，只談生理學。把生理時鐘固定在「最強的兩個錨點」上，極簡到懶人都能輕易做到。</p>
+        </div>
+    </section>
+
+    <section class="featured">
+        <div class="container">
+            <h2>無摩擦展示：看見科學的軌跡</h2>
+            <p style="color: #64748b; margin-bottom: 20px;">褪黑激素與皮質醇的黃金交叉，證明本方案完美契合人體真實生理機能。</p>
+            
+            <div class="mockup-wrapper">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="生理時鐘曲線數據化 Mockup" class="mockup-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="container content-grid">
+        <div class="steps-box">
+            <h3>3 大重置步驟</h3>
+            <div class="step-item">
+                <strong>步驟 1：固定起床錨 (最重要)</strong>
+                每天鬧鐘響就起來。週末最晚只能比平日晚 1 小時，這是緩衝區，不是失敗區。
+            </div>
+            <div class="step-item">
+                <strong>步驟 2：晨光錨 (10分鐘搞定)</strong>
+                起床後 30 分鐘內去窗邊看天空 10-20 分鐘，啟動最強的時間給予者。
+            </div>
+            <div class="step-item">
+                <strong>步驟 3：晚間暗光錨 (自動模式)</strong>
+                睡前 3 小時開始，開啟夜間模式與最低亮度，房間只留暖黃色小燈。
+            </div>
+        </div>
+
+        <div class="checklist-box">
+            <h3>高管級防呆清單</h3>
+            <p><strong>一頁式核對清單：</strong> 建議印出來貼在床頭或冰箱，每天打勾，建立堅不可摧的微習慣。</p>
+            
+            <div class="exclusive">
+                <strong style="color: var(--accent-gold); font-size: 1.2rem; display: block; margin-bottom: 5px;">🔥 獨家：熬夜/輪班應急補救法</strong>
+                如果昨晚真的凌晨 4 點才睡，早上爬不起來怎麼辦？懶人包內含「最低可行性補救措施」，保證生理時鐘不至於徹底崩盤。
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <h2>為你的大腦與時間，做出最正確的投資</h2>
+            <p style="font-size: 1.2rem; margin-top: 10px;">已有數十位創作者與高管成功重塑作息。</p>
+            <div class="price-tag">HK$29.9</div>
+            <a href="https://buy.stripe.com/6oUdR9eTl7jA1aV7L0dQQ04" class="btn">立即獲取《生理時鐘錨點懶人包》</a>
+            <p class="guarantee">安全付款由 Stripe 提供支持。購買後將立即導向下載頁面。</p>
+        </div>
+    </section>
+
+</body>
+</html>
